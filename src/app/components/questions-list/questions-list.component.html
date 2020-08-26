@@ -1,0 +1,3 @@
+<ng-container *ngFor="let question of questions$ | async">
+  <app-questions-list-item [data]="question"></app-questions-list-item>
+</ng-container>
