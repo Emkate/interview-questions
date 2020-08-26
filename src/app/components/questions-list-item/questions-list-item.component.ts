@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Question } from 'src/app/state/questions/question.model';
+import { QuestionModalService } from '../question-modal/question-modal.service';
 
 @Component({
   selector: 'app-questions-list-item',
@@ -9,9 +10,15 @@ import { Question } from 'src/app/state/questions/question.model';
 export class QuestionsListItemComponent implements OnInit {
   @Input() data: Question;
 
-  constructor() { }
+  constructor(
+    private questionModalService: QuestionModalService,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  openModal(question: Question): void {
+    this.questionModalService.openModal(question);
   }
 
 }

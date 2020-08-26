@@ -1,0 +1,51 @@
+.filter-item {
+  position: relative;
+  padding-top: 100%;
+  border-radius: 100%;
+  background-color: #eee;
+  transition: .3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #999;
+    transition: .3s;
+  }
+
+  &--selected {
+    -webkit-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+
+    .filter-item__title {
+      color: #000;
+    }
+  }
+
+  &--junior {
+    &.filter-item--selected {
+      background-color: #FDD006;
+    }
+  }
+
+  &--mid {
+    &.filter-item--selected {
+      background-color: #FF9C32;
+    }
+  }
+
+  &--senior {
+    &.filter-item--selected {
+      background-color: #F54F47;
+    }
+  }
+}

@@ -5,7 +5,12 @@
 .filters-item {
   border-right: 1px #ccc solid;
   position: sticky;
-  top: 20px;
+  top: 0;
   max-height: calc(100vh - 100px);
   overflow-y: auto;
+  max-width: 280px;
+}
+
+.heading {
+  margin-bottom: 10px;
 }

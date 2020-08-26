@@ -1,0 +1,21 @@
+.card-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.label {
+  &.label--junior {
+    background-color: #FDD006;
+    border-color: #FDD006;
+  }
+
+  &.label--mid {
+    background-color: #FF9C32;
+    border-color: #FF9C32;
+  }
+
+  &.label--senior {
+    background-color: #F54F47;
+    border-color: #F54F47;
+  }
+}

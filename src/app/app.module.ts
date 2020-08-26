@@ -13,6 +13,11 @@ import { QuestionsListComponent } from './components/questions-list/questions-li
 import { FilterTechnologyComponent } from './components/filter-technology/filter-technology.component';
 import { FilterTechnologyItemComponent } from './components/filter-technology-item/filter-technology-item.component';
 import { QuestionsListItemComponent } from './components/questions-list-item/questions-list-item.component';
+import { FilterAdvancementComponent } from './components/filter-advancement/filter-advancement.component';
+import { FilterAdvancementItemComponent } from './components/filter-advancement-item/filter-advancement-item.component';
+import { QuestionModalComponent } from './components/question-modal/question-modal.component';
+import { QuestionModalService } from './components/question-modal/question-modal.service';
+import { FiltersService } from './components/filters/filters.service';
 
 @NgModule({
   declarations: [
@@ -23,14 +28,17 @@ import { QuestionsListItemComponent } from './components/questions-list-item/que
     QuestionsListComponent,
     FilterTechnologyComponent,
     FilterTechnologyItemComponent,
-    QuestionsListItemComponent
+    QuestionsListItemComponent,
+    FilterAdvancementComponent,
+    FilterAdvancementItemComponent,
+    QuestionModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
   ],
-  providers: [QuestionsService],
+  providers: [QuestionsService, QuestionModalService, FiltersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
