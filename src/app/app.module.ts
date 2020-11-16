@@ -18,6 +18,7 @@ import { FilterAdvancementItemComponent } from './components/filter-advancement-
 import { QuestionModalComponent } from './components/question-modal/question-modal.component';
 import { QuestionModalService } from './components/question-modal/question-modal.service';
 import { FiltersService } from './components/filters/filters.service';
+import { FilterVotesComponent } from './components/filter-votes/filter-votes.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FiltersService } from './components/filters/filters.service';
     QuestionsListItemComponent,
     FilterAdvancementComponent,
     FilterAdvancementItemComponent,
-    QuestionModalComponent
+    QuestionModalComponent,
+    FilterVotesComponent
   ],
   imports: [
     BrowserModule,

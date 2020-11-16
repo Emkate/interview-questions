@@ -12,6 +12,13 @@
       </div>
       <div class="card-footer">
         <button (click)="openModal(data)" class="btn btn-sm btn-link">Pokaż odpowiedź</button>
+
+        <div class="card-footer__votes-container">
+          <div class="card-footer__votes-counter">{{ data.votersIds.length }}</div>
+          <button type="button" class="btn btn-icon btn-success" [class.btn-success-outline]="!data.votersIds.includes(userId)" (click)="voteButtonClick()">
+            <clr-icon shape="plus"></clr-icon>
+          </button>
+        </div>
       </div>
     </div>
   </div>
