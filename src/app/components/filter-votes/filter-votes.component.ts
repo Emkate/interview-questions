@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs/operators';
+import { QuestionsQuery } from 'src/app/state/questions/questions.query';
 
 @Component({
   selector: 'app-filter-votes',
@@ -7,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterVotesComponent implements OnInit {
   number = 0;
+  maximumVotes = 0;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private questionQuery: QuestionsQuery
+  ) {
   }
 
+  ngOnInit(): void {
+    this.getMaximumVotesNumber();
+  }
+
+  getMaximumVotesNumber(): void {
+    this.questionQuery.selectMaximumVotesNumber().pipe(
+      tap(votes => this.maximumVotes = votes)
+    ).subscribe();
+  }
 }

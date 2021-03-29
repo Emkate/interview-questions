@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ClarityModule } from '@clr/angular';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,6 +40,7 @@ import { FilterVotesComponent } from './components/filter-votes/filter-votes.com
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
+    FormsModule
   ],
   providers: [QuestionsService, QuestionModalService, FiltersService],
   bootstrap: [AppComponent]

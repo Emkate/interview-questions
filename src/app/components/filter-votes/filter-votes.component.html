@@ -1,6 +1,6 @@
 <form clrForm>
   <clr-range-container>
-      <input type="range" clrRange name="two" [(ngModel)]="number" />
+      <input type="range" clrRange name="two" [(ngModel)]="number" [max]="maximumVotes" />
   </clr-range-container>
 </form>
 <div>{{ number }}</div>

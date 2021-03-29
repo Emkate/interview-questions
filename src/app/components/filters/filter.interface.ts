@@ -1,4 +1,7 @@
+export type QuestionType = 'javascript' | 'angular' | 'react';
+export type QuestionLevel = 'junior' | 'mid' | 'senior';
+
 export interface Filter {
-  1: ('javascript' | 'angular' | 'react')[];
-  2: ('junior' | 'mid' | 'senior')[];
+  1: QuestionType[];
+  2: QuestionLevel[];
 }
