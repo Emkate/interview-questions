@@ -4,7 +4,13 @@
     <div class="clr-row clr-justify-content-center">
       <div class="clr-col-sm-12 clr-col-md-8">
         <div class="clr-row">
-          <div class="clr-col-sm-12 clr-col-md-4 filters-item">
+          <div class="clr-col-sm-12">
+            <button class="filters-button" (click)="showFilters()">Pokaż filtry</button>
+          </div>
+        </div>
+        <div class="clr-row">
+          <div class="clr-col-sm-12 clr-col-md-4 filters-item" [class.filters-item--visible]="isFiltersVisible">
+            <button class="filters-item__close-button" (click)="hideFilters()"></button>
             <h5 class="heading">Filtry</h5>
             <app-filters></app-filters>
           </div>

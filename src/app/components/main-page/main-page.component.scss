@@ -4,12 +4,76 @@
 }
 
 .filters-item {
-  border-right: 1px #ccc solid;
-  position: sticky;
+  position: fixed;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 10;
+  left: 0;
+  right: 0;
   top: 0;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-  max-width: 280px;
+  bottom: 0;
+  background-color: #fff;
+
+  @media only screen and (min-width: 768px) {
+    position: sticky;
+    border-right: 1px #ccc solid;
+    top: 0;
+    max-height: calc(100vh - 100px);
+    height: unset;
+    overflow-y: auto;
+    max-width: 280px;
+    background-color: transparent;
+  }
+
+  &--visible {
+    height: 100vh;
+  }
+
+
+  &__close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      width: 4px;
+      height: 30px;
+      background-color: #000;
+      border-radius: 4px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 4px;
+      height: 30px;
+      background-color: #000;
+      border-radius: 4px;
+    }
+  }
+}
+
+.filters-button {
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .heading {

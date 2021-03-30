@@ -1,3 +1,11 @@
 .item-heading {
   margin-bottom: 10px;
 }
+
+.mobile-wrapper {
+  overflow: scroll;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  margin: 0 -.6rem;
+  padding: 0 0.6rem;
+}
